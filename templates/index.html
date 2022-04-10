@@ -11,16 +11,16 @@
   
 </head>
 
-<body style="background: rgb(88, 171, 210);">
+<body style="background: rgb(114, 114, 114);">
  <div class="login">
-	<h1>Sentiments Analysis</h1>
+	<h1>Basic Calculator</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
 
     <form action="{{ url_for('predict')}}"method="post">
         <input type="text" name="a" placeholder="Enter the first number" required="required" />
         <input type="text" name="b" placeholder="Enter the second number" required="required" />
-        <input type="text" name="operation" placeholder="add / substract / divide / multiply" required="required" />
+        <input type="text" name="operation" placeholder="add / subtract / divide / multiply" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Calculate</button>
     </form>
 

@@ -11,13 +11,19 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    a = [float(x) for x in request.form['a'].values()]
-    b = [float(x) for x in request.form['b'].values()]
-    operation = [str(x) for x in request.form['operation'].values()]
+
+
+#   a = [float(x) for x in request.form['a'].values()]
+#   b = [float(x) for x in request.form['b'].values()]
+#   operation = [str(x) for x in request.form['operation'].values()]
+
+    a = float(request.form['a'])
+    b = float(request.form['b'])
+    operation = str(request.form['operation'])
 
     if operation == "add":
         result = a + b
-    elif operation == "substract":
+    elif operation == "subtract":
         result = a - b
     elif operation == "divide":
         result = a / b
