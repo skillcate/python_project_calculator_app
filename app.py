@@ -4,6 +4,9 @@ from flask import Flask, request, jsonify, render_template
 app = Flask(__name__)
 
 
+# importing function for calculations
+from basic_calculator_function import basic_calculator
+
 # Define calculator
 @app.route('/')
 def home():
@@ -12,18 +15,11 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
 
-    a = float(request.form['a'])
-    b = float(request.form['b'])
+    a = request.form['a']
+    b = request.form['b']
     operation = str(request.form['operation'])
 
-    if operation == "add":
-        result = a + b
-    elif operation == "subtract":
-        result = a - b
-    elif operation == "divide":
-        result = a / b
-    else:
-        result = a * b
+    result = basic_calculator(a,b,operation)
 
     return render_template('index.html', prediction_text=str(result))
 
