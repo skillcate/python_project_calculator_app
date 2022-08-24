@@ -44,3 +44,6 @@
         pip install -r requirements.txt         # install project dependencies
         python app.py                           # run the project
         deactivate                              # close virtual environment once done
+        
+### Bug / Feature Request
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/skillcate/calculator_app_with_flask_deployment/issues) by including your search query and the expected result.
